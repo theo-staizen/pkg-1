@@ -12,5 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "supports-color": "^9.4.0"
-  }
+  },
+  "files": [
+    "colors.mjs",
+    "output.log"
+  ]
 }
