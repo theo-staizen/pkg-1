@@ -15,7 +15,6 @@
   },
   "files": [
     "colors.mjs",
-    "output.log",
-    "node_modules/**"
+    "output.log"
   ]
 }
