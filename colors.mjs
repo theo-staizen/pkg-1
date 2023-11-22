@@ -1,13 +1,23 @@
 import supportsColor from 'supports-color';
+import fs from 'fs';
+
+let output = '';
+
+const addMessage = (message) => {
+    output += message + '\n';
+};
 
 if (supportsColor.stdout) {
-	console.log('Terminal stdout supports color');
+    addMessage('Terminal stdout supports color');
 }
 
 if (supportsColor.stdout.has256) {
-	console.log('Terminal stdout supports 256 colors');
+    addMessage('Terminal stdout supports 256 colors');
 }
 
 if (supportsColor.stderr.has16m) {
-	console.log('Terminal stderr supports 16 million colors (truecolor)');
+    addMessage('Terminal stderr supports 16 million colors (truecolor)');
 }
+
+fs.writeFileSync('output.log', output, 'utf8');
+
